@@ -5,6 +5,8 @@ const InvoicesList = ({ item, editInvoice }: invoicesList) => {
 
     const { id, paymentDue, clientName, total, status, items } = item;
 
+    const alowSend = false;
+
     const templateParams = {
         from_name: 'Rebecca',
         to_name: clientName,
@@ -21,18 +23,23 @@ const InvoicesList = ({ item, editInvoice }: invoicesList) => {
 
     const sendInvoice = (e: any) => {
         e.preventDefault();
-        send(
-            'service_h7g4qoh',
-            'template_2k0141s',
-            templateParams,
-            'user_ZfIuL5ZY7mTex5RrOdBPZ'
-        )
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            })
-            .catch((err) => {
-                console.log('FAILED...', err);
-            });
+
+        // Bool to prevent sending loads of emails
+        if (alowSend) {
+            send(
+                'service_h7g4qoh',
+                'template_2k0141s',
+                templateParams,
+                'user_ZfIuL5ZY7mTex5RrOdBPZ'
+            )
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert("Invoice is sent")
+                })
+                .catch((err) => {
+                    console.log('FAILED...', err);
+                });
+        }
     }
 
     return (
