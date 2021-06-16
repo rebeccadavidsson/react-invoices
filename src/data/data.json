@@ -1,0 +1,44 @@
+[
+    {
+        "id": "A301",
+        "createdAt": "2021-06-16",
+        "paymentDue": "2021-08-05",
+        "clientName": "Rebecca Davidsson",
+        "clientEmail": "rebeccadavidsson3@gmail.com",
+        "status": "paid",
+        "items": {
+            "description": "First invoice",
+            "workHours": 23,
+            "rate": 15
+        },
+        "total": 350.5
+    },
+    {
+        "id": "G623",
+        "createdAt": "2021-06-16",
+        "paymentDue": "2021-09-05",
+        "clientName": "Rebecca Davidsson",
+        "clientEmail": "rebeccadavidsson3@gmail.com",
+        "status": "pending",
+        "items": {
+            "description": "Second invoice",
+            "workHours": 50,
+            "rate": 15
+        },
+        "total": 1434.2
+    },
+    {
+        "id": "L192",
+        "createdAt": "2021-06-16",
+        "paymentDue": "2021-05-05",
+        "clientName": "Test Invoice",
+        "clientEmail": "rebeccadavidsson3@gmail",
+        "status": "late",
+        "items": {
+            "description": "Last invoice",
+            "workHours": 231,
+            "rate": 17
+        },
+        "total": 18341.95
+    }
+]
