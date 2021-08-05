@@ -20,6 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The basic html template from [scribbr.nl](https://www.scribbr.nl) was used, which can be found in `public/index.html`. Furthermore, the css stylesheet from [scribbr.nl](https://www.scribbr.nl) was used, found in `src/scribbr.css`.
 
 
+
 External resources used for this project are:
 * redux
 * react-redux
